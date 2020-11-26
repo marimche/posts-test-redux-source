@@ -1,6 +1,8 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {compose, createStore, applyMiddleware} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
+// import {compose} from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import App from './App';
@@ -8,10 +10,7 @@ import reportWebVitals from './reportWebVitals';
 import {rootReducer} from './redux/rootReducer';
 
 
-//доработать использование middleware
-const store = createStore(rootReducer, compose(
-  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__()
-));
+const store = createStore(rootReducer, composeWithDevTools( applyMiddleware(thunk) ));
 // const store = createStore(rootReducer, compose(
 //   applyMiddleware(thunk),
 //   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__()
