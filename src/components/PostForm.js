@@ -28,9 +28,7 @@ class PostForm extends React.Component {
 
 	changeInputHandler = event => {
 		event.persist(); //?
-		//в setState передаем функцию, которая обновит value для input 
-		//то есть надо сразу выполнить ф-цию и вернуть объект, поэтому +()
-		//объединяем обновленный state с предыдущим (приоритет у нового); (spread)
+		//в setState передаем функцию (и вызываем), которая обновит value для input 
 		this.setState( prev => ({...prev, ...{
 			[event.target.name]: event.target.value
 		}})); 

@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import {rootReducer} from './redux/rootReducer';
 
 
-//devtools-разобрать
+//доработать использование middleware
 const store = createStore(rootReducer, compose(
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__()
 ));
@@ -22,13 +22,6 @@ const app = (
     <App />
   </Provider>
 );
-
-// render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
 
 render(app, document.getElementById('root'));
 

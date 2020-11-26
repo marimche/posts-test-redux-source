@@ -1,5 +1,4 @@
 import {CREATE_POST, FETCH_POST} from './types';
-// import {CREATE_POST} from './types';
 
 export function createPost(post){
 	return{

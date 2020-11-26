@@ -9,6 +9,7 @@ const Posts = ({ syncPosts }) => {
 	return syncPosts.map(post => <Post post={post} key={post.id}/>)
 }
 
+//подписка на обновления хранилища
 const mapStateToProps = state => {
 	console.log(state);
 	return {
@@ -16,6 +17,5 @@ const mapStateToProps = state => {
 	};
 }
 
-//это компонент-контейнер 
-//сonnect() возвращает ф-цию, ее вызываем, передаем наш компонент
+//компонент-контейнер 
 export default connect(mapStateToProps)(Posts);
