@@ -11,7 +11,6 @@ const Posts = ({ syncPosts }) => {
 
 //подписка на обновления хранилища
 const mapStateToProps = state => {
-	console.log(state);
 	return {
 		syncPosts: state.posts.posts
 	};

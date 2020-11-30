@@ -2,12 +2,18 @@ import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {fetchPosts} from '../redux/actions';
 import Post from './Post';
+import {Loader} from './Loader';
 
 export default () => {
 	const dispatch = useDispatch();
-	const posts = useSelector((state) => {return state.posts.fetchedPosts}); //для получения из store, добавить позже
+	const posts = useSelector(state => state.posts.fetchedPosts); //получение из сторе
+	const loading = useSelector(state => state.app.loading);
 
-	console.log(posts);
+	if(loading){
+		return <Loader />
+	}
+
+
 	if (!posts.length){
 		return <button className="btn btn-primary" onClick={() => dispatch(fetchPosts())} >Загрузить</button>
 	}
