@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {fetchPosts} from '../redux/actions';
 import Post from './Post';
 import {Loader} from './Loader';
+import classes from './FetchedPosts.module.css'
 
 export default () => {
 	const dispatch = useDispatch();
@@ -15,7 +16,8 @@ export default () => {
 
 
 	if (!posts.length){
-		return <button className="btn btn-primary" onClick={() => dispatch(fetchPosts())} >Загрузить</button>
+		// return <button className="btn btn-primary" onClick={() => dispatch(fetchPosts())} >Загрузить</button>
+		return <button className={classes.button1} onClick={() => dispatch(fetchPosts())} >Загрузить</button>
 	}
 	return posts.map(post => <Post post={post} key={post.id}/>)
 }
