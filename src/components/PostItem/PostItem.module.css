@@ -1,0 +1,23 @@
+.postItem {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.postItem a{
+	color: #000;
+}
+
+.postItem h2{
+	font-weight: bold;
+}
+
+.postItem p{
+	color: rgba(0,0,0,0.5);
+}
+
+.postItem p a{
+	color: rgba(0,0,0,0.5);
+	font-weight: bold;
+	margin-left: 10px;
+}

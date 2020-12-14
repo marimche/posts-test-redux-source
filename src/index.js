@@ -10,6 +10,7 @@ import reportWebVitals from './reportWebVitals';
 import {rootReducer} from './redux/rootReducer';
 import {forbiddenWordsMiddleware} from './redux/middleware'
 import './styles/app.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 const store = createStore(rootReducer, composeWithDevTools( applyMiddleware(thunk, forbiddenWordsMiddleware) ));
