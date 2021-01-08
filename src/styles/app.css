@@ -5,3 +5,9 @@ body{
 .content{
 	margin: 60px auto;
 }
+
+.content h3 {
+	/* h1, h3 { */
+		color: rgb(79 115 250);
+		padding: 30px 0px 20px 0px;
+	}
